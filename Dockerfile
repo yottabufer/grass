@@ -10,4 +10,4 @@ FROM python:3.11-slim
 COPY --from=builder /usr/local /usr/local
 WORKDIR /app
 COPY . .
-CMD ["uvicorn", "tasks.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "tasks.main:app", "--host", "0.0.0.0", "--port", "9000"]

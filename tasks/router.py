@@ -3,8 +3,6 @@ from tasks.storage import Storage
 from tasks.depends import get_storage
 from tasks.service import TaskManager
 
-import logging
-logger = logging.getLogger(__name__)
 router = APIRouter(prefix='/tasks')
 
 

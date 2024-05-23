@@ -1,3 +1,7 @@
+# Тестовое задание для Grass
+
+<br/>
+<details>
 # Мини Таск менеджер.
 
 ### requirements:
@@ -34,3 +38,28 @@
  created_at: datetime
  updated_at: datetime
 ```
+</details>
+
+### Как протестировать API локально:
+1. Собрать тестовое задание в докере
+```python
+docker-compose up -d --force-recreate --build
+```
+2. по адресу 
+http://localhost:9000/docs#/default/create_task_tasks__post 
+передать словарь
+```commandline
+{
+"id": 2,
+"title": "Task 2",
+"completed": true,
+"created_at": "",
+"updated_at": ""
+}
+```
+3. А по адресу 
+http://localhost:9000/docs#/default/tasks_tasks__get
+можно получить список задач
+
+Тесты проходят:
+![Иллюстрация к проекту](test_img.png)<br/>

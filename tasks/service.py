@@ -30,21 +30,11 @@ class TaskManager:
         Тут вообще было пусто, написал всё сам
         """
 
-        """
-        {
-        "id": 2,
-        "title": "Task 2",
-        "completed": true,
-        "created_at": "",
-        "updated_at": ""
-        }
-        """
-
         task_data = dict(task_data)
         tasks = await self.storage.read()
 
         if not task_data.get('title'):
-            # Я час разбирался почему строчка снизу не работает((
+            # Я долго разбирался почему строчка снизу не работает((
             # return JSONResponse(status_code=400, content={"detail": "The title cannot be empty"})
             raise HTTPException(status_code=400, detail='The title cannot be empty')
 
